@@ -33,4 +33,16 @@ console.log(parsed);
   name: 'app'
 }
  */
+const str = path.format(parsed);
+console.log(str);
 
+// isAbsolute
+console.log('isAbsolute?', path.isAbsolute(__dirname));
+console.log('isAbsolute?', path.isAbsolute('../'));
+
+// normalize: 비정상적인 경로를 고쳐줌
+console.log(path.normalize('./folder/////////sub'));    // folder/sub
+
+// join
+console.log(__dirname + path.sep + 'image');
+console.log(path.join(__dirname, 'image'));
