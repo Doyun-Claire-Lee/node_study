@@ -12,7 +12,7 @@ console.log(path.sep);      // separator: 구분자
 console.log(path.delimiter) // 환경변수 구분자
 
 // basename
-console.log(path.basename(__filename));                 // app.js
+console.log(path.basename(__filename));                 // app-file.js
 console.log(path.basename(__filename, '.js'));     // app
 
 // dirname
@@ -28,7 +28,7 @@ console.log(parsed);
 {
   root: '/',
   dir: '/Users/doyun/IdeaProjects/node/node_study/node/9-path',
-  base: 'app.js',
+  base: 'app-file.js',
   ext: '.js',
   name: 'app'
 }
