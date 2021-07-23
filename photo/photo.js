@@ -37,6 +37,7 @@ function moveVideo(fileName) {
                 .catch(console.error);
         })
         .catch((error) => {
+            console.log(fileName);
             console.log('No video folder, Making folder....');
             fs.mkdir(videoDir)
                 .then(() => {
