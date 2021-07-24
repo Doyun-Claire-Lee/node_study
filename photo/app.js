@@ -38,10 +38,8 @@ try {
             moveFolder(workingFile, videoDir);
         } else if (capturedExt.includes(ext)) {
             moveFolder(workingFile, capturedDir);
-        } else {
-            if (checkDuplicated(workingFile)) {
-                moveFolder(workingFile.replace('IMG_E', 'IMG_'), duplicatedDir);
-            }
+        } else if (workingFile.includes('IMG_E')){
+            moveFolder(workingFile.replace('IMG_E', 'IMG_'), duplicatedDir);
         }
     });
 } catch (e) {
@@ -50,8 +48,4 @@ try {
 
 function moveFolder(fileName, dir) {
     fs.renameSync(path.join(workingDir, fileName), path.join(dir, fileName));
-}
-
-function checkDuplicated(fileName) {
-    return fileName.includes('IMG_E');
 }
