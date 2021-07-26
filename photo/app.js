@@ -4,7 +4,6 @@ const fs = require('fs');
 const folder = process.argv[2];
 const workingDir = path.join(__dirname, folder);
 
-// 전달받은 폴더명 유효성 검사
 if (!folder || !fs.existsSync(workingDir)) {
     console.error('Please enter valid folder name.');
     return;
