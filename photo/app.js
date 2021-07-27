@@ -13,12 +13,17 @@ const videoDir = path.join(workingDir, 'video');
 const capturedDir = path.join(workingDir, 'captured');
 const duplicatedDir = path.join(workingDir, 'duplicated');
 
-try {
-    fs.mkdirSync(videoDir);
-    fs.mkdirSync(capturedDir);
-    fs.mkdirSync(duplicatedDir);
-} catch (e) {
-}
+// &&연산자를 이용하여 간단하게 구현
+!fs.existsSync(videoDir) && fs.mkdirSync(videoDir);
+!fs.existsSync(capturedDir) && fs.mkdirSync(capturedDir);
+!fs.existsSync(duplicatedDir) && fs.mkdirSync(duplicatedDir);
+
+// try {
+//     fs.mkdirSync(videoDir);
+//     fs.mkdirSync(capturedDir);
+//     fs.mkdirSync(duplicatedDir);
+// } catch (e) {
+// }
 
 const videoExt = ['mp4', 'mov'];
 const capturedExt = ['png', 'aae'];
