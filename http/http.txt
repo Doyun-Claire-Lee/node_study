@@ -1,0 +1,38 @@
+[HTTP]
+- HyperText Transfer Protocol
+- 요즘에는 동영상 및 음성파일도 HTTP로 전송이 가능하기 때문에 HyperMedia로 보아야 하는것이 아닌지?
+- Request, Response로 구성됨
+
+[HTTPS]
+- HyperText Transfer Protocol Secure
+- 현재 거의 모든 웹사이트가 적용중
+- 클라이언트와 서버 사이에 TLS/SSL을 사용하여 정보를 암호화
+- 서로 보안 관계가 형성된 클라이언트와 서버 사이에는 정보를 복호화하여 볼 수 있으나 제 3자는 볼 수 없음
+- 동작 방식
+1. 클라이언트와 서버가 통신을 시작하게 되면 TCP connection이 생성됨
+2. 클라이언트가 서버에게 요청(Request Method, URL, Header)
+3. 서버가 클라이언트에게 응답(Response code, html, js, css)
+
+[Status Code]
+- 1XX: informational
+	100: continue
+	102: processing
+- 2XX: Successful
+	200: OK
+	201: Created
+	204: No Content
+- 3XX: Redirection
+- 4XX: Client error
+	400: Bad Request
+	401: Unauthorized
+	403: Forbidden(admin)
+	404: Not Found
+	405: Method Not Allowed
+	409: Conflict
+- 5XX: Server error
+	500: Internal Server Error
+	502: Bab Gateway
+	503: Server Unavailable
+
+[Request Methods]
+Idempotent : 요청의 횟수, 속도와 상관없이 동일한 요청을 받아도 서버가 항상 같은 상태인지의 여부
