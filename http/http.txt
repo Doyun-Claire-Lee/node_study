@@ -35,4 +35,4 @@
 	503: Server Unavailable
 
 [Request Methods]
-Idempotent : 요청의 횟수, 속도와 상관없이 동일한 요청을 받아도 서버가 항상 같은 상태인지의 여부
+Idempotent(멱등성) : 요청의 횟수, 속도와 상관없이 동일한 요청을 받아도 서버가 항상 같은 상태인지의 여부
